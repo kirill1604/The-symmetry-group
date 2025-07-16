@@ -8,3 +8,4 @@
 ## python libs
 
 `pip freeze` > [requirements.txt](requirements.txt)
+<!-- requirements_freeze_vendogor.txt -->
