@@ -116,7 +116,8 @@
 
 Для [генерации](./configs/REINVENT4_sampling_config.toml) был выбран режим `Mol2Mol`, для которого были отобраны [топ 57 ингибиторов](./data/HDAC6_filtered.csv) `HDAC6`, отсортированных по `pIC50` из общего [очищенного датасета](./data/HDAC6_cleaned.csv)
 
-Итоги генерации [тут](./data/sampling_out/REINVENT4/)
+Итоги генерации в папке [data/sampling_out/REINVENT4/](./data/sampling_out/REINVENT4/)
+Итоги скоринга для [одной из итераций](./data/sampling_out/REINVENT4/sampling_out1.csv) — [data/HDAC6_score.csv](./data/HDAC6_score.csv)  <!-- TODO: Тут нет pIC50 предикта, сматчите колонку из др. файла -->
 
 ```python
 filtered = cleaned[cleaned["pIC50"] >= 8.7].sort_values(by="pIC50", ascending=False, ignore_index=True)
@@ -139,8 +140,6 @@ filtered = cleaned[cleaned["pIC50"] >= 8.7].sort_values(by="pIC50", ascending=Fa
 
 Молекула проходила отбор успешно, если хотя бы 5 из 6 параметров попадали в допустимые области. Таких молекул было 20 штук.
 Дополнительно было принято решение отсеить все молекулы с ненулевым Toxicophore. Итого: 10 молекул, из них 1 удовлетворяет всем шести критериям, 9 - пяти.
-
-Также произведена фильтрация и отбор через скоринг REINVENT4  <!-- TODO: Тут нет данных -->
 
 ---
 
