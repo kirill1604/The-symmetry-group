@@ -5,6 +5,7 @@
 - [Final presentation](./docs/Презентация_Datacon_2025_Группа_симметрии.pptx)
 - [ITMO lectures and presentations](./docs/lectures/)
 - [Useful scripts from ITMO](./exps/oth_ipynb/)
+- [Tasks description](./docs/tasks.md)
 - [Mini-tasks](./exps/mini_tasks/)
 - [Data](./data/)
 - [REINVENT4 configurations](./configs/)
@@ -26,7 +27,7 @@ Although the amyloid cascade remains one of the leading hypotheses for the patho
 
 ### 1. Target selection
 
-По итогам [сравнительного анализа сигнальных путей](./targets_comparative_analysis.md) и количества доступных данных в открытых базах данных была выбрана целевая мишень:
+По итогам [сравнительного анализа сигнальных путей](./docs/targets_comparative_analysis.md) и количества доступных данных в открытых базах данных была выбрана целевая мишень:
 
 > **HDAC6**
 
@@ -104,7 +105,7 @@ Although the amyloid cascade remains one of the leading hypotheses for the patho
 
 ### [REINVENT4](https://github.com/MolecularAI/REINVENT4)
 
-`REINVENT4` — это командная Python-утилита для генерации малых молекул с помощью алгоритмов глубокого обучения и оптимизации через [многокомпонентное вознаграждение](REINVENT4_interpretations.md).  
+`REINVENT4` — это командная Python-утилита для генерации малых молекул с помощью алгоритмов глубокого обучения и оптимизации через [многокомпонентное вознаграждение](./docs/REINVENT4_interpretations.md).  
 
 - Генераторы представлены в виде **sequence-based** моделей, оперирующих SMILES-строками;
 - Базируются на **рекуррентных нейронных сетях (RNN)** и **трансформерах**, обученных моделировать распределение реальных молекулярных SMILES;
