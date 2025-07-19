@@ -1,18 +1,33 @@
-# DataCon2025: Генерация ингибиторов HDAC6 для терапии болезни Альцгеймера
+# DataCon2025 | Drug Discovery: Generation of HDAC6 inhibitors for the treatment of Alzheimer's disease
 
-## Описание проекта
+## Project structure
 
-Данный проект посвящен генерации новых молекул, потенциально способных взаимодействовать с мишенью `HDAC6`, участвующей в патогенезе болезни Альцгеймера.  
-Проект разработан в рамках соревнования DataCon2025 и использует современные методы машинного обучения для работы с химическими данными.
+- [Final presentation](./docs/Презентация_Datacon_2025_Группа_симметрии.pptx)
+- [ITMO lectures and presentations](./docs/lectures/)
+- [Useful scripts from ITMO](./exps/oth_ipynb/)
+- [Tasks description](./docs/tasks.md)
+- [Mini-tasks](./exps/mini_tasks/)
+- [Data](./data/)
+- [REINVENT4 configurations](./configs/)
+- [Dependencies](requirements.md)
+- [Documentation templates for preprints and articles](./TechDocs/)
+- [Scripts for working with documentation](./tools/)
 
-Болезнь Альцгеймера (БА) — одно из наиболее распространённых нейродегенеративных заболеваний, характеризующееся образованием и отложением амилоидных β (Aβ) бляшек в мозге. Эти бляшки запускают каскад патологических процессов: гиперфосфорилирование тау-белка → нейровоспаление → дегенерация нейронов и снижение когнитивных функций.  
-Хотя амилоидный каскад остаётся одной из ведущих гипотез патогенеза болезни, попытки создания эффективных препаратов против Aβ до сих пор не увенчались значительным успехом — преимущественно из-за биологической сложности заболевания. Современные исследования предлагают новые подходы — от биомаркеров и генетических стратегий до терапевтической диагностики — однако необходимость в альтернативных мишенях остаётся крайне актуальной.
+## Project description
+
+This project is dedicated to generating new molecules that are potentially capable of interacting with the HDAC6 target, which is involved in the pathogenesis of Alzheimer's disease.  
+The project was developed as part of the DataCon2025 competition and uses modern machine learning methods to work with chemical data.
+
+Alzheimer's disease (AD) is one of the most common neurodegenerative diseases, characterized by the formation and deposition of amyloid β (Aβ) plaques in the brain. These plaques trigger a cascade of pathological processes: tau protein hyperphosphorylation → neuroinflammation → neuronal degeneration and cognitive decline.  
+Although the amyloid cascade remains one of the leading hypotheses for the pathogenesis of the disease, attempts to develop effective drugs against Aβ have not yet been crowned with significant success, mainly due to the biological complexity of the disease. Current research offers new approaches — from biomarkers and genetic strategies to therapeutic diagnostics — but the need for alternative targets remains extremely relevant.
 
 ---
 
-## 1. Выбор мишени
+## Steps
 
-По итогам [сравнительного анализа сигнальных путей](./targets_comparative_analysis.md) и количества доступных данных в открытых базах данных была выбрана целевая мишень:
+### 1. Target selection
+
+По итогам [сравнительного анализа сигнальных путей](./docs/targets_comparative_analysis.md) и количества доступных данных в открытых базах данных была выбрана целевая мишень:
 
 > **HDAC6**
 
@@ -92,7 +107,7 @@
 
 ### [REINVENT4](https://github.com/MolecularAI/REINVENT4)
 
-`REINVENT4` — это командная Python-утилита для генерации малых молекул с помощью алгоритмов глубокого обучения и оптимизации через многокомпонентное вознаграждение.  
+`REINVENT4` — это командная Python-утилита для генерации малых молекул с помощью алгоритмов глубокого обучения и оптимизации через [многокомпонентное вознаграждение](./docs/REINVENT4_interpretations.md).  
 
 - Генераторы представлены в виде **sequence-based** моделей, оперирующих SMILES-строками;
 - Базируются на **рекуррентных нейронных сетях (RNN)** и **трансформерах**, обученных моделировать распределение реальных молекулярных SMILES;
